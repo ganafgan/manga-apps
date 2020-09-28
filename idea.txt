@@ -1,0 +1,6 @@
+API
+
+https://jikan.docs.apiary.io/#
+https://github.com/febryardiansyah/manga-api
+https://jikan.moe/
+https://jikan.docs.apiary.io/#reference/0/search
