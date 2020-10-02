@@ -13,6 +13,7 @@ import ManhuaChina from './ManhuaChina'
 import ThisSeasonAnime from './ThisSeasonAnime'
 import NextSeasonAnime from './NextSeasonAnime'
 import MangaReadPage from './MangaReadPage'
+import GenreDetail from './GenreDetail'
 
 export {
     Splash,
@@ -29,5 +30,6 @@ export {
     ManhuaChina,
     ThisSeasonAnime,
     NextSeasonAnime,
-    MangaReadPage
+    MangaReadPage,
+    GenreDetail
 }

@@ -1,36 +1,11 @@
 import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity } from 'react-native'
-import { IL18, ILAction, ILComedy, ILEarth, ILFantasy, ILHorror, ILRomance, ILSchool } from '../../../assets'
 import { colors, fonts } from '../../../utils'
 
-const MangaCategory = ({category, onPress}) => {
-    const Icon = () => {
-        if (category === 'Action'){
-            return <Image source={ILAction} style={styles.img} />
-        }
-        if (category === 'Comedy'){
-            return <Image source={ILComedy} style={styles.img} />
-        }
-        if (category === 'Romance'){
-            return <Image source={ILRomance} style={styles.img} />
-        }
-        if (category === 'School'){
-            return <Image source={ILSchool} style={styles.img} />
-        }
-        if (category === 'Horror'){
-            return <Image source={ILHorror} style={styles.img} />
-        }
-        if (category === 'Fantasy'){
-            return <Image source={ILFantasy} style={styles.img} />
-        }
-        if (category === '18+'){
-            return <Image source={IL18} style={styles.img} />
-        }
-        return <Image source={ILEarth} style={styles.img} />
-    }
+const MangaCategory = ({category, onPress, pict}) => {
     return (
         <TouchableOpacity style={styles.container} onPress={onPress}>
-            <Icon />
+            <Image source={pict} style={styles.img} />
             <Text style={styles.category}>{category}</Text>
         </TouchableOpacity>
     )

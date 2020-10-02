@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     img: {
         height: 125,
         width: 100,
-        resizeMode: 'contain',
+        resizeMode: 'cover',
         borderRadius: 10,
     },
     wrapperText: {

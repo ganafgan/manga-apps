@@ -1,7 +1,7 @@
 import Axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native'
-import { ILChinaFlag, ILJapanFlag, ILKoreaFlag } from '../../assets'
+import { IcCategoryAction, IcCategoryComedy, IcCategoryRomance, IcCategorySchool, ILChinaFlag, ILJapanFlag, ILKoreaFlag } from '../../assets'
 import { Button, Gap, Link, Loading, MangaCategory, MangaCountry, MangaItem, MangaList, SearchItem, Slider } from '../../components'
 import { Fire } from '../../config'
 import { colors, fonts, showError } from '../../utils'
@@ -106,8 +106,10 @@ const Home = ({navigation}) => {
     const renderMangaCategory = () => {
         return mangaCategory.map((val)=>{
             return  <MangaCategory 
-                category={val.category}
                 key={val.id}
+                category={val.category}
+                pict={{uri: val.pict}}
+                onPress={() => navigation.navigate(`GenreDetail`, val)}
             />
         })
     }
@@ -159,7 +161,7 @@ const Home = ({navigation}) => {
                         />
                     </View>
                 </View>
-                <Gap height={30} />
+                <Gap height={20} />
                 {
                     search !== ''
                     ?
@@ -187,13 +189,13 @@ const Home = ({navigation}) => {
                         <View style={styles.category}>
                             {renderMangaCategory()}
                         </View>
-                        <Gap height={30} />
+                        <Gap height={20} />
                         <View style={styles.wrapperTitle}>
                             <View>
                                 <Text style={styles.title}>The Latest</Text>
                             </View>
                             <View>
-                                <Link title='View All' size={14} onPress={() => navigation.navigate('ViewAll', {link: `manga/page/1`, title: `The Latest`})}/>
+                                <Link title='View All' size={14} onPress={() => navigation.navigate('ViewAll', {link: `manga/page/1`, title: `Latest Manga`})}/>
                             </View>   
                         </View>
                         <Gap height={15} />
@@ -233,7 +235,7 @@ const Home = ({navigation}) => {
                                 <Text style={styles.title}>Popular</Text>
                             </View>
                             <View>
-                                <Link title='View All' size={14} onPress={() => navigation.navigate('ViewAll', {link: `manga/popular/1`, title: `Popular`})} />
+                                <Link title='View All' size={14} onPress={() => navigation.navigate('ViewAll', {link: `manga/popular/1`, title: `Popular Manga`})} />
                             </View>   
                         </View>
                         <Gap height={15} />
@@ -249,7 +251,7 @@ const Home = ({navigation}) => {
                         <Gap height={10} />
                     </View>
                 }
-            <Gap height={30}/>
+            <Gap height={20}/>
             </ScrollView>
         </View>
         {loading && <Loading/>}

@@ -15,7 +15,6 @@ const ManhuaChina = ({navigation}) => {
     const getDataManga = () => {
         Axios.get(`http://mangamint.azurewebsites.net/api/manhua/1`)
         .then((res)=>{
-            console.log(res)
             setDataManga(res.data.manga_list)
         })
         .catch((error)=>{

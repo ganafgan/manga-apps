@@ -4,3 +4,13 @@ https://jikan.docs.apiary.io/#
 https://github.com/febryardiansyah/manga-api
 https://jikan.moe/
 https://jikan.docs.apiary.io/#reference/0/search
+
+redux-persist(favorite)
+reduz-thunk
+redux-persist
+redux-thunk
+magga@theloudminority.co.id
+https://marvelapp.com/prototype/25feg7e6/screen/73074766
+
+jbl indonesia
+my hartono

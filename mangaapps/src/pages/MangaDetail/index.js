@@ -11,6 +11,8 @@ const MangaDetail = ({navigation, route}) => {
     const [mangaDetail, setMangaDetail] = useState([])
     const [search, setSearch] = useState('')
     const [profile, setProfile] = useState([])
+
+    console.log(val)
     
    useEffect(()=>{
         getMangaDetail()

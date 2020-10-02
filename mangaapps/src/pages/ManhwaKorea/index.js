@@ -7,7 +7,6 @@ import { colors, showError } from '../../utils'
 const ManhwaKorea = ({navigation}) => {
 
     const [dataManga, setDataManga] = useState([])
-    console.log(dataManga)
 
     useEffect(()=>{
         getDataManga()
@@ -16,7 +15,6 @@ const ManhwaKorea = ({navigation}) => {
     const getDataManga = () => {
         Axios.get(`http://mangamint.azurewebsites.net/api/manhwa/1`)
         .then((res)=>{
-            console.log(res)
             setDataManga(res.data.manga_list)
         })
         .catch((error)=>{

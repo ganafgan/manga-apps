@@ -3,7 +3,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { BottomNavigator } from '../components';
-import { Account, Favorite, Home, Login, MangaDetail, MangaJepang, MangaReadPage, ManhuaChina, ManhwaKorea, News, NextSeasonAnime, Register, Splash, ThisSeasonAnime, ViewAll } from '../pages';
+import { Account, Favorite, GenreDetail, Home, Login, MangaDetail, MangaJepang, MangaReadPage, ManhuaChina, ManhwaKorea, NextSeasonAnime, Register, Splash, ThisSeasonAnime, ViewAll } from '../pages';
 import { colors, fonts } from '../utils';
 
 const Tab = createBottomTabNavigator();
@@ -52,6 +52,7 @@ const Router = () => {
             <Stack.Screen name='ViewAll' component={ViewAll} options={{headerShown: false}} />
             <Stack.Screen name='MyTab' component={MyTab} options={{headerShown: false}} />
             <Stack.Screen name='MangaReadPage' component={MangaReadPage} options={{headerShown: false}} />
+            <Stack.Screen name='GenreDetail' component={GenreDetail} options={{headerShown: false}} />
         </Stack.Navigator>
     )
 }

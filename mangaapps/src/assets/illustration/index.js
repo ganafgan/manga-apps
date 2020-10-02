@@ -11,12 +11,6 @@ import ILEarth from './earth.png'
 import ILJapanFlag from './flag-japan.png'
 import ILKoreaFlag from './flag-korea.png'
 import ILChinaFlag from './flag-china.png'
-import ILMangaOne from './manga-one.jpg'
-import ILMangaHero from './manga-hero.jpg'
-import ILMangaGirl from './manga-girlfriend.jpg'
-import ILMangaNaruto from './manga-naruto.jpg'
-import ILMangaOnePiece from './manga-onepiece.jpg'
-import ILMangaBlack from './manga-blackclover.jpeg'
 import ILBug from './IL-error.png'
 import ILHelp from './IL-help.png'
 import ILInfo from './IL-info.png'
@@ -40,12 +34,6 @@ export {
     ILJapanFlag,
     ILKoreaFlag,
     ILChinaFlag,
-    ILMangaOne,
-    ILMangaHero,
-    ILMangaGirl,
-    ILMangaNaruto,
-    ILMangaOnePiece,
-    ILMangaBlack,
     ILBug,
     ILHelp,
     ILInfo,

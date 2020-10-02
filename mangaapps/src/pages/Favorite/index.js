@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Alert, RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native'
-import { Gap, MangaList } from '../../components'
+import { Gap, Loading, MangaList } from '../../components'
 import { Fire } from '../../config'
 import { colors, fonts, getData, showError } from '../../utils'
 
-const Favorite = () => {
+const Favorite = ({navigation}) => {
 
     const [dataFavorite, setDataFavorite] = useState([])
     const [profile, setProfile] = useState([])
@@ -29,8 +29,9 @@ const Favorite = () => {
                             data: oldData[key]
                         })
                     })
+                    console.log(data)
                     setDataFavorite(data)
-                }
+                } 
             })
     }
 
@@ -55,15 +56,16 @@ const Favorite = () => {
     }
 
     const renderDataFavorite = () => {
-        return dataFavorite.map((item, index)=>{
+        return dataFavorite.map((val, index)=>{
             return  <MangaList 
                     key={index}
-                    title={item.data.title}
-                    img={{uri: item.data.thumb}}
-                    type={item.data.type}
+                    title={val.data.title}
+                    img={{uri: val.data.thumb}}
+                    type={val.data.type}
                     deleteButton
                     titleDelete='delete'
-                    onPressDelete={() => deleteDataFavorite(item.id)}
+                    onPressDelete={() => deleteDataFavorite(val.id)}
+                    onPress={() => navigation.navigate(`MangaDetail`, {endpoint: val.data.endpoint})}
                 />      
             })
     }
@@ -84,8 +86,13 @@ const Favorite = () => {
                     <Text style={styles.title}>Favorites</Text>
                 </View>
                 <Gap height={20} />
-                {renderDataFavorite()}
-                
+                {
+                    dataFavorite.length === 0
+                    ? 
+                    <Text style={styles.empty}>Data favorite kosong</Text>
+                    : 
+                    renderDataFavorite()
+                }
            </ScrollView>
         </View>
     )
@@ -103,6 +110,15 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        fontFamily: fonts.primary[600]
+        fontFamily: fonts.primary[600],
+        paddingBottom: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.border,
+        textAlign: 'center'
     },
+    empty: {
+        fontSize: 16,
+        fontFamily: fonts.primary[600],
+        textAlign: 'center',
+    }
 })

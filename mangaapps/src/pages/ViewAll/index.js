@@ -9,8 +9,7 @@ const ViewAll = ({route, navigation}) => {
     const val = route.params
     const [data, setData] = useState([])
 
-    console.log(val.title)
-    console.log(data)
+    console.log(val)
 
     useEffect(()=>{
         getDataManga()
@@ -61,12 +60,12 @@ const ViewAll = ({route, navigation}) => {
     return (
         <View style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <Gap height={30} />
+                <Gap height={20} />
                 <Text style={styles.title}>{val.title}</Text>
                 <Gap height={20} />
                 <View style={styles.wrapper}>
                     {
-                        val.title === `Popular` 
+                        val.title === `Popular Manga` 
                         ? renderDataPopular()
                         : renderDataLatest()
                     }
@@ -94,6 +93,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontFamily: fonts.primary[600],
-        paddingLeft: 30
+        paddingLeft: 30,
+        textAlign: 'center'
     }
 })

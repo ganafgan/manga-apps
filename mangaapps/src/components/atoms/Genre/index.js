@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginRight: 10,
         borderColor: colors.primary,
-        borderWidth: 1
+        borderWidth: 1,
+        marginBottom: 10
       
     },
     text: {
