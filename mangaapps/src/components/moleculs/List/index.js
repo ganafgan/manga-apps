@@ -2,7 +2,6 @@ import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { IcArrowNext } from '../../../assets'
 import { colors, fonts } from '../../../utils'
-import { Gap } from '../../atoms'
 
 const List = ({img, title, onPress}) => {
     return (

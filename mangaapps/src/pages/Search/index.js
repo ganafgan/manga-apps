@@ -11,9 +11,6 @@ const Search = () => {
             </View>
             <Gap height={50} />
             <MangaList />
-            {/* <View style={styles.wrapperTitle}>
-                <Text style={styles.title}>Manga Yosh !!!</Text>
-            </View> */}
         </View>
     )
 }

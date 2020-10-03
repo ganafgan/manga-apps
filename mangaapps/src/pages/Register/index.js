@@ -3,7 +3,7 @@ import { Image, ScrollView, StyleSheet, View } from 'react-native'
 import { ILLogo } from '../../assets'
 import { Button, Gap, Input, Loading } from '../../components'
 import { Fire } from '../../config'
-import { colors, getData, showError, showSuccess, storeData, useForm } from '../../utils'
+import { colors, showError, showSuccess, storeData, useForm } from '../../utils'
 
 const Register = ({navigation}) => {
 

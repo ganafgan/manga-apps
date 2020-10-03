@@ -1,8 +1,8 @@
 import Axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native'
-import { IcCategoryAction, IcCategoryComedy, IcCategoryRomance, IcCategorySchool, ILChinaFlag, ILJapanFlag, ILKoreaFlag } from '../../assets'
-import { Button, Gap, Link, Loading, MangaCategory, MangaCountry, MangaItem, MangaList, SearchItem, Slider } from '../../components'
+import { ILChinaFlag, ILJapanFlag, ILKoreaFlag } from '../../assets'
+import { Button, Gap, Link, Loading, MangaCategory, MangaCountry, MangaItem, SearchItem, Slider } from '../../components'
 import { Fire } from '../../config'
 import { colors, fonts, showError } from '../../utils'
 

@@ -11,8 +11,6 @@ const MangaDetail = ({navigation, route}) => {
     const [mangaDetail, setMangaDetail] = useState([])
     const [search, setSearch] = useState('')
     const [profile, setProfile] = useState([])
-
-    console.log(val)
     
    useEffect(()=>{
         getMangaDetail()
@@ -203,7 +201,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: fonts.primary[600],
         marginRight: 10,
-        color: colors.black
+        color: colors.black,
     },
     value: {
         fontSize: 16,

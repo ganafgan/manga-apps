@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Alert, RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native'
-import { Gap, Loading, MangaList } from '../../components'
+import { Gap, MangaList } from '../../components'
 import { Fire } from '../../config'
 import { colors, fonts, getData, showError } from '../../utils'
 
@@ -9,7 +9,7 @@ const Favorite = ({navigation}) => {
     const [dataFavorite, setDataFavorite] = useState([])
     const [profile, setProfile] = useState([])
     const [refreshing, setRefreshing] = useState(false)
-  
+
     useEffect(()=>{
         getDataUser()
         getDataFavorite()
@@ -29,9 +29,10 @@ const Favorite = ({navigation}) => {
                             data: oldData[key]
                         })
                     })
-                    console.log(data)
                     setDataFavorite(data)
-                } 
+                } else {
+                    setDataFavorite([])
+                }
             })
     }
 
@@ -87,11 +88,11 @@ const Favorite = ({navigation}) => {
                 </View>
                 <Gap height={20} />
                 {
-                    dataFavorite.length === 0
+                    dataFavorite.length !== 0
                     ? 
-                    <Text style={styles.empty}>Data favorite kosong</Text>
-                    : 
                     renderDataFavorite()
+                    : 
+                    <Text style={styles.empty}>Data favorite kosong</Text>
                 }
            </ScrollView>
         </View>

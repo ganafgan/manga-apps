@@ -1,7 +1,7 @@
 import Axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { ScrollView, StyleSheet, View, Text } from 'react-native'
-import { Gap, Loading, MangaItem, MangaList } from '../../components'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Gap, Loading, MangaItem } from '../../components'
 import { colors, fonts, showError } from '../../utils'
 
 const GenreDetail = ({route, navigation}) => {

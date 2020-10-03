@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { colors, fonts } from '../../../utils'
 
 const MangaItem = ({img, title, type, date, chapter, onPress}) => {

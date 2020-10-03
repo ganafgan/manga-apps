@@ -9,8 +9,6 @@ const ViewAll = ({route, navigation}) => {
     const val = route.params
     const [data, setData] = useState([])
 
-    console.log(val)
-
     useEffect(()=>{
         getDataManga()
     },[])
@@ -18,7 +16,6 @@ const ViewAll = ({route, navigation}) => {
     const getDataManga = () => {
         Axios.get(`http://mangamint.azurewebsites.net/api/${val.link}`)
         .then((res)=>{
-            console.log(res)
             setData(res.data.manga_list)
         })
         .catch((error)=>{
